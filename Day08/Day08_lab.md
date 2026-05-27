@@ -107,12 +107,14 @@ Allow:
 
 Launch instance.
 
+sonarqube-server-pulak
+
 ---
 
 # Step 3 – Connect to EC2
 
 ```bash
-ssh -i mykey.pem ec2-user@<SONAR-IP>
+ssh -i pulak-ec2-key.pem ec2-user@54.92.232.121
 ```
 
 ---
@@ -163,7 +165,7 @@ docker ps
 Open browser:
 
 ```text
-http://<SONAR-IP>:9000
+http://54.92.232.121:9000
 ```
 
 Default credentials:
@@ -209,7 +211,7 @@ Step 8: Add SonarQube Project File
 
     Create sonar-project.properties:
     
-    sonar.projectKey=sonarqube-demo-rama
+i    sonar.projectKey=sonarqube-demo-rama
     sonar.projectName=sonarqube-demo-rama
     sonar.projectVersion=1.0
     sonar.sources=.
@@ -224,7 +226,7 @@ version: 0.2
 
 env:
   variables:
-    SONAR_HOST_URL: "http://52.91.208.212:9000"
+    SONAR_HOST_URL: "http://54.92.232.121:9000"
 
 phases:
   install:
@@ -418,6 +420,7 @@ Generate token:
 
 ```text
 demo-token
+sqa_c30283ec1eb5e583df4510d31c9109354b2c8a3d
 ```
 
 Copy token.
